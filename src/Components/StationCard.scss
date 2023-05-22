@@ -1,0 +1,14 @@
+.StationCard {
+  height: 50px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
