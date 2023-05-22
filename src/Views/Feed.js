@@ -14,9 +14,10 @@ const Feed = () => {
 
   const handleSearchFilter = (e) => {
     setUserInput(e.target.value.trim().toLowerCase());
-    setCurrentList(e.target.value.length < 1 ? stations : stationsFilteredBySearch);
+    setCurrentList(
+      e.target.value.length < 1 ? stations : stationsFilteredBySearch
+    );
   };
-
 
   return (
     <>
