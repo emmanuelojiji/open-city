@@ -1,0 +1,23 @@
+.search-container {
+  position: sticky;
+  top: 0;
+  background: #16b042;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  input{
+    height: 45px;
+    width: 100%;
+    border-radius: 10px;
+    border: 0;
+  }
+}
+
+.feed-container {
+  height: 100vh;
+  background: #18d04c;
+}
