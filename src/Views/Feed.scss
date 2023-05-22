@@ -9,8 +9,7 @@
   padding-left: 15px;
   padding-right: 15px;
 
-
-  input{
+  input {
     height: 45px;
     width: 100%;
     border-radius: 10px;
@@ -19,11 +18,10 @@
 }
 
 .feed-container {
-
   background: #18d04c;
   padding-top: 30px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom:20px ;
- 
+  padding-bottom: 20px;
+  min-height: 100vh;
 }

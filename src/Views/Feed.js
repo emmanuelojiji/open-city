@@ -1,18 +1,36 @@
+import "./Feed.scss";
+import { useEffect, useState } from "react";
 import { stations } from "../Components/Data/Stations";
 import SearchBar from "../Components/SearchBar";
 import StationCard from "../Components/StationCard";
-import "./Feed.scss";
 
 const Feed = () => {
+  const [currentList, setCurrentList] = useState(stations);
+  const [userInput, setUserInput] = useState();
+
+  const stationsFilteredBySearch = stations.filter((station) =>
+    station.name.toLowerCase().includes(userInput)
+  );
+
+  const handleSearchFilter = (e) => {
+    setUserInput(e.target.value.toLowerCase());
+    setCurrentList(e.target.value.length < 1 ? stations : stationsFilteredBySearch);
+  };
+
+
   return (
     <>
       <div className="search-container">
-        <SearchBar/>
+        <SearchBar
+          userInput={userInput}
+          setUserInput={setUserInput}
+          onChange={handleSearchFilter}
+        />
       </div>
 
       <div className="feed-container">
-        {stations.map((station) => (
-          <StationCard key={station.tla} name={station.name} />
+        {currentList.map((station) => (
+          <StationCard name={station.name} />
         ))}
       </div>
     </>

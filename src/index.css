@@ -1,10 +1,12 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
   /*touch-action: pan-y;*/
 }
 
 html{
   /*touch-action: pan-y;*/
+  min-height: 100vh;
 }
 
