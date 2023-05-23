@@ -4,7 +4,7 @@ import { stations } from "../Components/Data/Stations";
 import SearchBar from "../Components/SearchBar";
 import StationCard from "../Components/StationCard";
 import icon_scroll from "../Media/icon-scroll.svg";
-import icon_train_sideways from "../Media/icon-train-sideways.svg"
+import icon_train_sideways from "../Media/icon-train-sideways.svg";
 
 const Feed = () => {
   const [currentList, setCurrentList] = useState(stations);
@@ -42,9 +42,11 @@ const Feed = () => {
       <div className="feed-container">
         {currentList.length === 0 && (
           <div className="no-stations">
-            <img src={icon_train_sideways}/>
+            <div className="animation-container">
+              <img src={icon_train_sideways} />
+            </div>
             <h2>We can't find that station.</h2>
-            <p>Why not trying using filters instead?</p>
+            <p>Why not try using filters instead?</p>
           </div>
         )}
 
