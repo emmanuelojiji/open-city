@@ -6,6 +6,7 @@ const StationCard = ({ name }) => {
     <div className="StationCard">
       <img src={icon_train} />
       <h3>{name}</h3>
+      <div className="status-light"></div>
     </div>
   );
 };
