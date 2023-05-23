@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { stations } from "../Components/Data/Stations";
 import SearchBar from "../Components/SearchBar";
 import StationCard from "../Components/StationCard";
+import icon_scroll from "../Media/icon-scroll.svg";
 
 const Feed = () => {
   const [currentList, setCurrentList] = useState(stations);
@@ -19,8 +20,16 @@ const Feed = () => {
     );
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
+      <img src={icon_scroll} className="scroll" onClick={() => scrollToTop()} />
       <div className="search-container">
         <SearchBar
           userInput={userInput}
