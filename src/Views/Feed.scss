@@ -1,7 +1,7 @@
 .search-container {
   position: sticky;
   top: 0;
-  
+
   background: #18d04c;
   height: 85px;
   display: flex;
@@ -9,7 +9,6 @@
   justify-content: center;
   padding-left: 15px;
   padding-right: 15px;
-
 }
 
 .feed-container {
@@ -19,12 +18,27 @@
   padding-right: 15px;
   padding-bottom: 20px;
   min-height: 100vh;
-  position: relative
+  position: relative;
 }
 
-.scroll{
-  position:fixed;
+.scroll {
+  position: fixed;
   bottom: 100px;
   right: 0;
   z-index: 5;
+}
+
+.no-stations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    color: white;
+    margin-top: 15px;
+  }
+
+  p {
+    color: #0f782c;
+  }
 }
