@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { stations } from "../Components/Data/Stations";
 import SearchBar from "../Components/SearchBar";
 import StationCard from "../Components/StationCard";
+import icon_scroll from "../Media/icon-scroll.svg";
 
 const Feed = () => {
   const [currentList, setCurrentList] = useState(stations);
@@ -21,6 +22,7 @@ const Feed = () => {
 
   return (
     <>
+      <img src={icon_scroll} className="scroll" />
       <div className="search-container">
         <SearchBar
           userInput={userInput}
