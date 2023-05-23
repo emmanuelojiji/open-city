@@ -60,6 +60,9 @@
   }
 
   .img-wrap {
+    width: 30px;
+    height: 30px;
+    background-color: brown;
     transform: translateX(-300%);
     animation: trainMoving 3s infinite ease-in-out;
 

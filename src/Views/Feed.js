@@ -48,7 +48,7 @@ const Feed = () => {
           <div className="no-stations">
             <div className="animation-container">
               <div class="img-wrap">
-              <img src={icon_train_sideways} />
+              >
               </div>
             </div>
             <h2>We can't find that station.</h2>
