@@ -16,7 +16,7 @@
 
     &::placeholder {
       transition: 0.25s ease-in-out;
-      color: #0C802C;
+      color: #0c802c;
     }
 
     &:focus {
@@ -30,6 +30,11 @@
 
 .search-location {
   padding-left: 20px;
+  color: #878787;
+  display: flex;
+  img{
+    margin-right: 5px;
+  }
 }
 
 .SearchBar {
