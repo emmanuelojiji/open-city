@@ -14,8 +14,6 @@
   }
 }
 
-
-
 .search-container {
   position: sticky;
   top: 0;
@@ -61,10 +59,10 @@
     color: #0f782c;
   }
 
-  img {
+  .img-wrap {
     transform: translateX(-300%);
     animation: trainMoving 3s infinite ease-in-out;
-    
+
     opacity: 0;
   }
 }
@@ -75,5 +73,3 @@
   display: flex;
   justify-content: center;
 }
-
-

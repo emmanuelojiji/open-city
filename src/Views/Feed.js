@@ -10,7 +10,7 @@ const Feed = () => {
 
   const image = new Image() 
   image.src = icon_train_sideways;
-  
+
   const [currentList, setCurrentList] = useState(stations);
   const [userInput, setUserInput] = useState();
 
@@ -47,7 +47,9 @@ const Feed = () => {
         {currentList.length === 0 && (
           <div className="no-stations">
             <div className="animation-container">
+              <div class="img-wrap">
               <img src={icon_train_sideways} />
+              </div>
             </div>
             <h2>We can't find that station.</h2>
             <p>Why not try using filters instead?</p>
