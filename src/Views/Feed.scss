@@ -62,7 +62,8 @@
 
   img {
     transform: translateX(-300%);
-    animation: trainMoving 3s infinite linear;
+    animation: trainMoving 3s infinite ease-in-out;
+    
     opacity: 0;
   }
 }
