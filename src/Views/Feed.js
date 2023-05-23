@@ -4,7 +4,7 @@ import { stations } from "../Components/Data/Stations";
 import SearchBar from "../Components/SearchBar";
 import StationCard from "../Components/StationCard";
 import icon_scroll from "../Media/icon-scroll.svg";
-import icon_train_sideways from "../Media/icon-train-sideways.webp";
+import icon_train_sideways from "../Media/icon-train-sideways.png";
 
 const Feed = () => {
 
