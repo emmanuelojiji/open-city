@@ -1,14 +1,16 @@
 .StationCard {
-  height: 50px;
+  min-height: 50px;
   width: 100%;
   background: white;
   border-radius: 10px;
   margin-bottom: 20px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+
   padding-left: 20px;
   padding-right: 20px;
-  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 
   &:last-child {
     margin-bottom: 0;
@@ -19,6 +21,13 @@
   }
 }
 
+.station-card-header {
+  display: flex;
+  align-items: center;
+
+  height: 50px;
+}
+
 .status-light {
   width: 6px;
   height: 6px;
@@ -26,4 +35,10 @@
   box-shadow: 0px 0px 6px 1.2px rgba(255, 49, 49, 1);
   border-radius: 100%;
   margin-left: auto;
+}
+
+.card-expanded-info {
+  height: 100px;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
 }
