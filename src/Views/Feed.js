@@ -7,8 +7,7 @@ import icon_scroll from "../Media/icon-scroll.svg";
 import icon_train_sideways from "../Media/icon-train-sideways.png";
 
 const Feed = () => {
-
-  const image = new Image() 
+  const image = new Image();
   image.src = icon_train_sideways;
 
   const [currentList, setCurrentList] = useState(stations);
@@ -32,6 +31,10 @@ const Feed = () => {
     });
   };
 
+  useEffect(() => {
+    console.log(userInput);
+  });
+
   return (
     <>
       <img src={icon_scroll} className="scroll" onClick={() => scrollToTop()} />
@@ -40,6 +43,8 @@ const Feed = () => {
           userInput={userInput}
           setUserInput={setUserInput}
           onChange={handleSearchFilter}
+          setCurrentList={setCurrentList}
+          stations={stations}
         />
       </div>
 
@@ -47,9 +52,7 @@ const Feed = () => {
         {currentList.length === 0 && (
           <div className="no-stations">
             <div className="animation-container">
-              
               <img src={icon_train_sideways} />
-           
             </div>
             <h2>We can't find that station.</h2>
             <p>Why not try using filters instead?</p>

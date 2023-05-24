@@ -12,11 +12,13 @@ const StationCard = ({ name }) => {
         <div className="status-light"></div>
       </div>
 
-      <div
-        class="card-expanded-info"
-        style={{ height: expanded ? "100px" : "0px" }}
-      >
-        <p>extra info</p>
+      <div class={`card-expanded-info ${expanded && "expanded"}`}>
+        <div className="row">
+          <h3>Latest Report</h3>
+          <p>
+            <span className="highlight-closed">Closed</span> Barriers reported at 15:30
+          </p>
+        </div>
       </div>
     </div>
   );
