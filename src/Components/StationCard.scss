@@ -35,6 +35,17 @@
   box-shadow: 0px 0px 6px 1.2px rgba(255, 49, 49, 1);
   border-radius: 100%;
   margin-left: auto;
+  animation: light-blink 0.5s infinite ease-in-out;
+}
+
+@keyframes light-blink {
+  0%{
+    box-shadow: 0px 0px 6px 1.2px rgba(255, 49, 49, 1);
+  }
+
+  100%{
+    box-shadow: 0px 0px 10px 1.2px rgba(255, 49, 49, 1);
+  }
 }
 
 .card-expanded-info {
