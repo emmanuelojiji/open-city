@@ -7,8 +7,7 @@ import icon_scroll from "../Media/icon-scroll.svg";
 import icon_train_sideways from "../Media/icon-train-sideways.png";
 
 const Feed = () => {
-  const image = new Image();
-  image.src = icon_train_sideways;
+ 
 
   const [currentList, setCurrentList] = useState(stations);
   const [userInput, setUserInput] = useState();
