@@ -9,6 +9,11 @@ const SearchBar = ({
   setCurrentList,
   stations,
 }) => {
+  const clearSearch = () => {
+    setUserInput("");
+    setCurrentList(stations);
+  };
+
   return (
     <div className="search-wrap">
       <div className="search-location">
@@ -22,15 +27,7 @@ const SearchBar = ({
         onChange={onChange}
         value={userInput}
       ></input>
-      {userInput && (
-        <img
-          src={icon_cross}
-          onClick={() => {
-            setUserInput("");
-            setCurrentList(stations);
-          }}
-        />
-      )}
+      {userInput && <img src={icon_cross} onClick={() => clearSearch()} />}
     </div>
   );
 };
