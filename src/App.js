@@ -6,15 +6,9 @@ import NavBar from "./Components/NavBar";
 import Feed from "./Views/Feed";
 
 function App() {
-  const defaultVote = localStorage.getItem("votes") || 0;
+ 
 
-  const [votes, setVotes] = useState(defaultVote);
-
-  useEffect(() => {
-    localStorage.setItem("votes", votes);
-    console.log(votes);
-  }, [votes]);
-
+ 
   return (
     <Router>
       <div className="App">
@@ -23,7 +17,7 @@ function App() {
           <Route
             exact
             path="/"
-            element={<Feed votes={votes} setVotes={setVotes} />}
+            element={<Feed />}
           />
         </Routes>
         <NavBar />
