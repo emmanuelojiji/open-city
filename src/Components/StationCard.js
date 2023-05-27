@@ -16,9 +16,19 @@ const StationCard = ({ name }) => {
         <div className="row">
           <h3>Latest Report</h3>
           <p>
-            <span className="highlight-closed">Closed</span> Barriers reported at 15:30
+            <span className="highlight-closed">Closed</span> Barriers reported
+            at 15:30
           </p>
         </div>
+        {localStorage.getItem("votes") < 2 && (
+          <h2
+            onClick={() =>
+              localStorage.setItem("votes", localStorage.getItem("votes") + 1)
+            }
+          >
+            Vote
+          </h2>
+        )}
       </div>
     </div>
   );

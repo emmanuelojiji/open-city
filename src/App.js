@@ -6,6 +6,10 @@ import NavBar from "./Components/NavBar";
 import Feed from "./Views/Feed";
 
 function App() {
+  useEffect(() => {
+    localStorage.setItem("votes", 0);
+    console.log(`Votes left: ${localStorage.getItem("votes")}`);
+  });
   return (
     <Router>
       <div className="App">
