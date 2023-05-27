@@ -6,9 +6,7 @@ import StationCard from "../Components/StationCard";
 import icon_scroll from "../Media/icon-scroll.svg";
 import icon_train_sideways from "../Media/icon-train-sideways.png";
 
-const Feed = () => {
- 
-
+const Feed = ({ votes, setVotes }) => {
   const [currentList, setCurrentList] = useState(stations);
   const [userInput, setUserInput] = useState();
 
@@ -59,7 +57,7 @@ const Feed = () => {
         )}
 
         {currentList.map((station) => (
-          <StationCard name={station.name} />
+          <StationCard name={station.name} votes={votes} setVotes={setVotes} />
         ))}
       </div>
     </>

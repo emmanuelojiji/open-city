@@ -2,7 +2,7 @@ import "./StationCard.scss";
 import { useState } from "react";
 import icon_train from "../Media/icon-train.svg";
 
-const StationCard = ({ name }) => {
+const StationCard = ({ name, votes, setVotes }) => {
   const [expanded, setExpanded] = useState(false);
   return (
     <div className="StationCard" onClick={() => setExpanded(!expanded)}>
@@ -20,14 +20,8 @@ const StationCard = ({ name }) => {
             at 15:30
           </p>
         </div>
-        {localStorage.getItem("votes") < 2 && (
-          <h2
-            onClick={() =>
-              localStorage.setItem("votes", parseInt(localStorage.getItem("votes")) + 1)
-            }
-          >
-            Vote
-          </h2>
+        {votes < 2 && (
+          <h2 onClick={() => setVotes(votes + 1)}>Vote</h2>
         )}
       </div>
     </div>
