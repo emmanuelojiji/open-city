@@ -23,7 +23,7 @@ const StationCard = ({ name }) => {
         {localStorage.getItem("votes") < 2 && (
           <h2
             onClick={() =>
-              localStorage.setItem("votes", localStorage.getItem("votes") + 1)
+              localStorage.setItem("votes", parseInt(localStorage.getItem("votes")) + 1)
             }
           >
             Vote
